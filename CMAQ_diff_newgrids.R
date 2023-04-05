@@ -71,6 +71,7 @@ plot1 <-  ggplot(data = dataset_plot.sf) +
   geom_point(data = dataset_plot, 
              aes(x= lon, y= lat, color = diff_emiss)) +
   coord_sf(xlim = c(66.94, 153.05), ylim = c(8.92, 55.48)) +
+  scale_color_viridis() +
   theme( axis.text = element_text( size = 4)) +
   facet_wrap( . ~ year)  
 
@@ -80,6 +81,7 @@ plot2 <-  ggplot(data = dataset_plot.sf) +
   geom_point(data = dataset_plot, 
              aes(x= lon, y= lat, color = diff_met)) +
   coord_sf(xlim = c(66.94, 153.05), ylim = c(8.92, 55.48)) +
+  scale_color_viridis() +
   theme( axis.text = element_text( size = 4)) +
   facet_wrap( . ~ year) 
 
